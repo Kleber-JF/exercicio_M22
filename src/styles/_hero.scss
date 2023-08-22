@@ -1,0 +1,57 @@
+@use 'variables';
+
+.hero {
+    padding: 40px 30px;
+    background-image: url(../images/audience.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0 60%;
+    position: relative;
+   
+    .container {
+        position: relative;
+    }
+
+    &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.7;
+        background-color: variables.$black;
+        content: '';
+    }
+
+    &__title {
+        text-align: center;
+        color: variables.$red1;
+
+        @media (max-width: 767px) {
+            font-size: 24px;
+        }
+    }
+
+    &__logo {
+        display: block;
+        margin: 40px auto;
+        max-width: 200px;
+        width: 100%;
+
+        @media (max-width: 767px) {
+            width: 50%;
+        }
+    }
+
+    &__text {
+        margin-bottom: 40px;
+        text-align: center;
+        width: 100%;
+        color: variables.$red1;
+        font-size: 36px;
+
+        @media (max-width: 767px) {
+            font-size: 20px;
+        }
+    }
+}

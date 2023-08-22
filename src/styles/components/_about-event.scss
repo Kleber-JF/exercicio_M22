@@ -1,0 +1,67 @@
+@use '../variables';
+
+.about-event {
+    padding: 12px;
+    background-color: variables.$white;
+    max-width: 960px;
+    width: 100%;
+    border-radius: 6px;
+    margin: 0 auto;
+
+    &__container {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+
+        @media (max-width: 767px) {
+            display: block;
+            height: auto;
+        }
+    }
+
+    &__list {
+        display: flex;
+        gap: 60px;
+
+        @media (max-width: 767px) {
+            display: block;
+            text-align: center;
+        }
+
+        @media (min-width: 767px) and (max-width: 1023px) {
+            gap: 20px;
+        }
+
+        &__item {
+            display: block;
+            font-size: 20px;
+
+            @media (max-width: 767px) {
+                margin: 20px 0;
+            }
+
+            b {
+                display: block;
+                margin-bottom: 8px;
+            }
+        }
+    }
+    
+    .button {
+        padding: 12px;
+        border-radius: 6px;
+        background-color: variables.$red1;
+        font-size: 20px;
+        text-align: center;
+        text-decoration: none;
+        color: variables.$white;
+
+        @media (max-width: 767px) {
+            display: block;
+        }
+
+        @media (min-width: 767px) and (max-width: 1023px) {
+            white-space: nowrap;
+        }
+    }
+}
